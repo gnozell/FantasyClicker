@@ -24,13 +24,14 @@ public class button_actions : MonoBehaviour {
 	}
 
 	public void press_gold(){
-		rm.gold += 1000;
+		rm.gold += 1;
 	}
 
 	public void buy_adventurers(){
 		if (rm.gold >= 100) {
 			rm.gold -= 100;
 			rm.adventurer_parties += 1;
+			rm.total_adventurer_parties += 1;
 		}
 	}
 }

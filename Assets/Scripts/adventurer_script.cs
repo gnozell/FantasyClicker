@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class adventurer_script : MonoBehaviour {
 
-	public int gold_reward;
+	public int gold_reward = 20;
 	public float end_time;
 	public resource_manager rm;
 
@@ -18,7 +18,6 @@ public class adventurer_script : MonoBehaviour {
 
 	private float current_time;
 	private float halfwaytime;
-	private float journeyLength;
 	private float start_time;
 
 	private GameObject myadventurer;
@@ -37,7 +36,6 @@ public class adventurer_script : MonoBehaviour {
 		current_time = 0;
 		halfwaytime = end_time / 2;
 		start_time = Time.time;
-		journeyLength = Vector3.Distance(start_point.position, end_point.position);
 		myadventurer = Instantiate (adventurer, start_point.position, transform.localRotation, transform);
 		
 	}
